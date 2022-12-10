@@ -10,10 +10,9 @@ const Navbar = () => {
         <li><a href="#contact" className='text-lg hover:text-white transition-all'>Contact Me</a></li>
     </>
     return (
-        <header className='shadow-xl'>
+        <header>
             <nav
-                className='bg-gradient-to-r from-[RGBA(126,213,111,0.8)] to-[RGBA(40,180,133,0.8)]
-                            flex justify-between items-center p-5'>
+                className='flex justify-between items-center p-5'>
                 <h5 className='text-xl  font-black'>RAIHAN GAZI</h5>
                 <ul className='hidden w-7/12 lg:w-5/12 md:flex justify-between  font-semibold'>
                     {menuItems}
@@ -22,8 +21,8 @@ const Navbar = () => {
             </nav>
             {/* Mobile Nav */}
             <div
-                className={`absolute top-0 ${mobileNav ? 'left-[-800px]' : 'left-[0px]'} transition-all 
-            m-[20px] z-40 w-8/12 h-screen bg-gradient-to-r from-cyan-500 to-blue-500 md:hidden`}>
+                className={`fixed top-0 ${mobileNav ? 'left-[-800px]' : 'left-[0px]'} transition-all 
+             z-40 w-8/12 h-screen bg-gradient-to-r from-cyan-500 to-blue-500 md:hidden`}>
                 <ul className='text-white m-10'>
                     {menuItems}
                 </ul>
